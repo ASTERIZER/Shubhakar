@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MycoBrew - Mushroom Cultivation & Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero-background"></div>
+        <header>
+            <div class="logo">MycoBrew</div>
+            <nav>
+                <a href="#services">SERVICES</a>
+                <a href="#team">TEAM</a>
+                <a href="#login">LOGIN</a>
+                <a href="#about">ABOUT</a>
+                <a href="#cart" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </nav>
+        </header>
+
+        <main class="hero">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <h1 id="main-heading">Gourmet<br>Cafe<br>Experience</h1>
+                <div style="margin-left: 2rem;">
+                    <p id="main-description" class="description">Renowned for our delicious mushroom-infused cuisine and artisanal coffee in our cozy cafe atmosphere.</p>
+                    <div class="toggle-buttons-container">
+                        <div class="toggle-buttons-outline">
+                            <button id="cafe-button" class="toggle-button active">CAFE</button>
+                            <button id="mushrooms-button" class="toggle-button">MUSHROOMS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="stats">
+            <div class="stat-card">
+                <div class="number">24+</div>
+                <div class="label">Mushroom varieties</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">50+</div>
+                <div class="label">Unique recipes</div>
+            </div>
+        </section>
+
+        <div id="cafe-content" class="content-section active">
+            <div class="floating-items"></div>
+            <section id="services" class="services-section">
+                <h2>Our Cafe Menu</h2>
+                <div class="food-grid">
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mushroom Pizza">
+                        </div>
+                        <h3>Truffle Mushroom Pizza</h3>
+                        <p>Gourmet pizza with truffle oil, three types of mushrooms, and mozzarella.</p>
+                        <div class="food-price">$14.99</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn decrement-btn">-</button>
+                            <input type="number" value="1" min="1" class="item-quantity" readonly>
+                            <button class="quantity-btn increment-btn">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mushroom Burger">
+                        </div>
+                        <h3>Portobello Burger</h3>
+                        <p>Grilled portobello mushroom cap with avocado, tomato, and special sauce.</p>
+                        <div class="food-price">$12.99</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn decrement-btn">-</button>
+                            <input type="number" value="1" min="1" class="item-quantity" readonly>
+                            <button class="quantity-btn increment-btn">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mushroom Coffee">
+                        </div>
+                        <h3>Lion's Mane Coffee</h3>
+                        <p>Artisanal coffee infused with lion's mane mushroom extract for focus.</p>
+                        <div class="food-price">$5.99</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn decrement-btn">-</button>
+                            <input type="number" value="1" min="1" class="item-quantity" readonly>
+                            <button class="quantity-btn increment-btn">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mushroom Pasta">
+                        </div>
+                        <h3>Wild Mushroom Pasta</h3>
+                        <p>Creamy pasta with a medley of wild mushrooms and fresh herbs.</p>
+                        <div class="food-price">$16.99</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn decrement-btn">-</button>
+                            <input type="number" value="1" min="1" class="item-quantity" readonly>
+                            <button class="quantity-btn increment-btn">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="mushrooms-content" class="content-section">
+            <div class="floating-mushrooms"></div>
+            <section id="about" class="services-section">
+                <h2>Our Mushroom Varieties</h2>
+                <div class="mushroom-grid">
+                    <div class="mushroom-card">
+                        <div class="mushroom-image">
+                            <img src="Oyster Mushrooms.jpg" alt="Oyster Mushrooms">
+                            <div class="mushroom-3d-effect"></div>
+                        </div>
+                        <div class="mushroom-info">
+                            <h3>Oyster Mushrooms</h3>
+                            <p>Delicate, mild flavor with velvety texture. Perfect for stir-fries and soups.</p>
+                            <ul class="mushroom-details">
+                                <li><strong>Growing Difficulty:</strong> Easy</li>
+                                <li><strong>Harvest Time:</strong> 14-21 days</li>
+                                <li><strong>Nutritional Value:</strong> High in protein, fiber, and vitamins</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mushroom-card">
+                        <div class="mushroom-image">
+                            <img src="Lion's Mane.jpg" alt="Lion's Mane">
+                            <div class="mushroom-3d-effect"></div>
+                        </div>
+                        <div class="mushroom-info">
+                            <h3>Lion's Mane</h3>
+                            <p>Known for cognitive benefits and seafood-like flavor. Great for brain health.</p>
+                            <ul class="mushroom-details">
+                                <li><strong>Growing Difficulty:</strong> Moderate</li>
+                                <li><strong>Harvest Time:</strong> 10-14 days</li>
+                                <li><strong>Nutritional Value:</strong> Contains compounds that support nerve growth</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mushroom-card">
+                        <div class="mushroom-image">
+                            <img src="Shiitake.jpg" alt="Shiitake">
+                            <div class="mushroom-3d-effect"></div>
+                        </div>
+                        <div class="mushroom-info">
+                            <h3>Shiitake</h3>
+                            <p>Rich, earthy flavor and meaty texture for gourmet dishes. A culinary favorite.</p>
+                            <ul class="mushroom-details">
+                                <li><strong>Growing Difficulty:</strong> Moderate</li>
+                                <li><strong>Harvest Time:</strong> 2-7 months</li>
+                                <li><strong>Nutritional Value:</strong> Contains lentinan, which boosts immune system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="team" class="team-section">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Shubhakar">
+                <h3>Shubhakar</h3>
+                <p>Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Brother">
+                <h3>Brother</h3>
+                <p>Chef</p>
+            </div>
+            </div>
+        </section>
+
+        <section id="training" class="contact-section">
+            <h2>Mushroom Cultivation Training</h2>
+            <p>Interested in learning how to grow your own mushrooms? Sign up for our training program!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <select>
+                    <option value="" disabled selected>Select Training Type</option>
+                    <option value="beginner">Beginner Workshop</option>
+                    <option value="advanced">Advanced Techniques</option>
+                    <option value="commercial">Commercial Scale</option>
+                </select>
+                <textarea placeholder="Tell us about your experience level and interests" rows="5" required></textarea>
+                <button type="submit" class="cta-button">Register for Training</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 MycoBrew. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cafeButton = document.getElementById('cafe-button');
+            const mushroomsButton = document.getElementById('mushrooms-button');
+            const cafeContent = document.getElementById('cafe-content');
+            const mushroomsContent = document.getElementById('mushrooms-content');
+            const floatingItems = document.querySelector('.floating-items');
+            const floatingMushrooms = document.querySelector('.floating-mushrooms');
+            const mainHeading = document.getElementById('main-heading');
+            const mainDescription = document.getElementById('main-description');
+            const toggleButtons = document.querySelectorAll('.toggle-button');
+            
+            // Food items for cafe background
+            const foodItems = ['🍕', '☕', '🍔', '🍺', '🥗', '🍄', '🥪', '🍰'];
+            
+            // Mushroom varieties for mushroom background
+            const mushroomItems = ['🍄', '🌿', '🌱', '🍄', '🌾', '🍄', '🌿', '🍄'];
+            
+            // Cart functionality
+            let cartItems = [];
+
+            function updateCartCount() {
+                const cartCountElement = document.getElementById('cart-count');
+                let totalCount = 0;
+                cartItems.forEach(item => {
+                    totalCount += item.quantity;
+                });
+                cartCountElement.textContent = totalCount;
+            }
+            
+            // Create floating food items
+            for (let i = 0; i < 20; i++) {
+                const item = document.createElement('div');
+                item.className = 'floating-item';
+                item.textContent = foodItems[Math.floor(Math.random() * foodItems.length)];
+                item.style.left = `${Math.random() * 100}%`;
+                item.style.top = `${Math.random() * 100}%`;
+                item.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                item.style.animationDelay = `${Math.random() * 5}s`;
+                floatingItems.appendChild(item);
+            }
+            
+            // Create floating mushroom items
+            for (let i = 0; i < 20; i++) {
+                const item = document.createElement('div');
+                item.className = 'floating-item';
+                item.textContent = mushroomItems[Math.floor(Math.random() * mushroomItems.length)];
+                item.style.left = `${Math.random() * 100}%`;
+                item.style.top = `${Math.random() * 100}%`;
+                item.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                item.style.animationDelay = `${Math.random() * 5}s`;
+                floatingMushrooms.appendChild(item);
+            }
+            
+            // Add to cart functionality
+            function showNotification(foodCard) {
+                const foodName = foodCard.querySelector('h3').textContent;
+                const quantity = parseInt(foodCard.querySelector('.item-quantity').value);
+
+                const notification = document.createElement('div');
+                notification.className = 'cart-notification';
+                notification.textContent = `${foodName} x${quantity} added to cart!`;
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    notification.classList.add('fade-out');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 500);
+                }, 2000);
+            }
+
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('add-to-cart-btn')) {
+                    const foodCard = e.target.closest('.food-card');
+                    const foodName = foodCard.querySelector('h3').textContent;
+                    const foodPrice = foodCard.querySelector('.food-price').textContent;
+                    const quantity = parseInt(foodCard.querySelector('.item-quantity').value);
+                    
+                    cartItems.push({ name: foodName, price: foodPrice, quantity: quantity });
+                    
+                    showNotification(foodCard);
+                    updateCartCount();
+                    
+                    // Update button text permanently
+                    e.target.textContent = 'Added!';
+                    e.target.disabled = true;
+                } else if (e.target.classList.contains('increment-btn')) {
+                    const quantityInput = e.target.previousElementSibling;
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                    showNotification(e.target.closest('.food-card'));
+                    // Update cart item quantity and total count
+                    const foodCard = e.target.closest('.food-card');
+                    const foodName = foodCard.querySelector('h3').textContent;
+                    const existingItem = cartItems.find(item => item.name === foodName);
+                    if (existingItem) {
+                        existingItem.quantity = parseInt(quantityInput.value);
+                    }
+                    updateCartCount();
+                } else if (e.target.classList.contains('decrement-btn')) {
+                    const quantityInput = e.target.nextElementSibling;
+                    if (parseInt(quantityInput.value) > 1) {
+                        quantityInput.value = parseInt(quantityInput.value) - 1;
+                        showNotification(e.target.closest('.food-card'));
+                        // Update cart item quantity and total count
+                        const foodCard = e.target.closest('.food-card');
+                        const foodName = foodCard.querySelector('h3').textContent;
+                        const existingItem = cartItems.find(item => item.name === foodName);
+                        if (existingItem) {
+                            existingItem.quantity = parseInt(quantityInput.value);
+                        }
+                        updateCartCount();
+                    }
+                }
+            });
+            
+            // 3D effect for mushroom cards
+            const mushroomCards = document.querySelectorAll('.mushroom-card');
+            mushroomCards.forEach(card => {
+                card.addEventListener('mousemove', function(e) {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left; // x position within the element
+                    const y = e.clientY - rect.top; // y position within the element
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const deltaX = (x - centerX) / centerX * 15; // max 15 degrees
+                    const deltaY = (y - centerY) / centerY * 15; // max 15 degrees
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${-deltaY}deg) rotateY(${deltaX}deg) scale3d(1.05, 1.05, 1.05)`;
+                    
+                    const image = card.querySelector('.mushroom-image');
+                    image.style.transform = `translateZ(50px)`;
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                    const image = card.querySelector('.mushroom-image');
+                    image.style.transform = 'translateZ(0)';
+                });
+            });
+            
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    toggleButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    if (this.id === 'cafe-button') {
+                        cafeContent.classList.add('active');
+                        mushroomsContent.classList.remove('active');
+                        document.body.classList.remove('mushroom-theme');
+                        mainHeading.innerHTML = 'Gourmet<br>Cafe<br>Experience';
+                        mainDescription.textContent = 'Renowned for our delicious mushroom-infused cuisine and artisanal coffee in our cozy cafe atmosphere.';
+                    } else if (this.id === 'mushrooms-button') {
+                        mushroomsContent.classList.add('active');
+                        cafeContent.classList.remove('active');
+                        document.body.classList.add('mushroom-theme');
+                        mainHeading.innerHTML = 'Mushroom<br>Cultivation<br>& Varieties';
+                        mainDescription.textContent = 'Renowned for our expertise in gourmet mushroom cultivation with a wide variety of species for culinary and medicinal use.';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
